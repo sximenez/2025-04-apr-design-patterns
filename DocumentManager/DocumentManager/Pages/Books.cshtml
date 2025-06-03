@@ -1,0 +1,28 @@
+﻿@page
+@model DocumentManager.Pages.BooksModel
+@{
+    ViewData["Title"] = "Books";
+}
+
+<h1>Books</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model.Books)
+        {
+            <tr>
+                <td>@book.Category</td>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
